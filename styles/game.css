@@ -292,6 +292,7 @@ body {
 .if-invalid {
     position: absolute;
     top: 0;
+    left: 0;
     display: none;
     text-align: center; 
     width: 100%;
@@ -306,6 +307,7 @@ body {
 .if-guessed {
     position: absolute;
     top: 0;
+    left: 0;
     display: none;
     text-align: center; 
     width: 100%;
@@ -320,6 +322,7 @@ body {
 .if__not-in {
     position: absolute;
     top: 0;
+    left: 0;
     display: none;
     text-align: center; 
     width: 100%;
@@ -334,6 +337,7 @@ body {
 .if-congratulations {
     position: absolute;
     top: 0;
+    left: 0;
     display: none;
     text-align: center; 
     width: 100%;
@@ -348,6 +352,7 @@ body {
 .if__didnt-guess {
     position: absolute;
     top: 0;
+    left: 0;
     display: none;
     text-align: center; 
     width: 100%;
@@ -391,6 +396,7 @@ body {
         height: 58px;
         border-radius: 15px;
         font-size: 0.9rem;
+        text-align: center;
     }
 
     .button-reset {
