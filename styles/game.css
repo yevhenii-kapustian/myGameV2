@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    background-color: white;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background  {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    filter: blur(2px);
+    z-index: -10;
+}
+
+.main-square {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    height: 700px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.main__background-img {
+    display: none;
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.main__background-img.active {
+    display: block;
+}
+
+.main__background-phone-img {
+    display: none;
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.main__background-phone-img.active {
+    display: none;
+}
+
+.game__start-text {
+    display: none;
+    text-align: center;
+}
+
+.game__start-text.active {
+    display: block;
+}
+
+#guess-button {
+    position: absolute;
+    top: 567px;
+    right: 215px;
+    width: 110px;
+    height: 94px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    border: solid 1px #f6c379;
+    background-image: linear-gradient(to bottom, #af3a56, #5a2043, #542452, #602f66, #84439c);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-shadow: 0 0 19px #ffffffa3;
+}
+
+.button-reset {
+    position: absolute;
+    top: 567px;
+    right: 67px;
+    width: 110px;
+    height: 94px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: solid 1px #aaa9ff;
+    background-image: linear-gradient(to bottom, #6ca6dc, #355296, #203d84, #29458c, #2871be);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-shadow: 0 0 19px #ffffffa3;
+}
+
+.game__start-text h1 {
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.game__start-text h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+.button-back {
+    width: 100px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-back:hover {
+    color: white;
+    background-color: black;
+}
+
+
+.button-info {
+    margin: 0 auto;
+    width: 200px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-info:hover {
+    color: white;
+    background-color: black;
+}
+
+
+.button-start {
+    padding: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-start:hover {
+    color: white;
+    background-color: black;
+}
+
+
+
+.main-game .active h3 {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.attemts-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 567px;
+    left: 68px;
+    width: 113px;
+    height: 94px;
+    border-radius: 20px;
+    color: white;
+    border: solid 1px #f6c379;
+    background-image: linear-gradient(to bottom, #af3a56, #5a2043, #542452, #602f66, #84439c);
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 0 0 19px #ffffffa3;
+}
+
+.guess-section {
+    text-align: center;
+}
+
+.guess-section input {
+    outline: 0;
+    color: white;
+    background: none;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 16px #ff0000;
+    border: 0;
+    width: 4rem;
+    height: 5rem;
+    position: absolute;
+    top: 330px;
+    right: 315px;
+}
+
+.guess-section input::placeholder {
+    color: rgb(255, 255, 255); 
+    font-weight: 400;
+
+}
+
+.word-info {
+    width: 300px;
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    text-shadow: 0 0 16px rgb(255 255 255);
+}
+
+.game-info {
+    display: none;
+}
+
+.game-info.active {
+    display: block;
+}
+
+
+.guess-section {
+    display: none;
+}
+
+.guess-section.active {
+    display: block;
+}
+
+
+.button-reset {
+    display: none;
+    text-align: center;
+}
+
+.guessed-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 567px;
+    left: 221px;
+    width: 110px;
+    height: 94px;
+    border-radius: 20px;
+    color: white;
+    border: solid 1px #aaa9ff;
+    background-image: linear-gradient(to bottom, #6ca6dc, #355296, #203d84, #29458c, #2871be);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-shadow: 0 0 19px #ffffffa3;
+}
+
+
+/* Game-If */
+
+
+
+.if-invalid {
+    position: absolute;
+    top: 0;
+    display: none;
+    text-align: center; 
+    width: 100%;
+    height: 100%;
+    line-height: 70vh; 
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 17px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.if-guessed {
+    position: absolute;
+    top: 0;
+    display: none;
+    text-align: center; 
+    width: 100%;
+    height: 100%;
+    line-height: 70vh; 
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 17px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.if__not-in {
+    position: absolute;
+    top: 0;
+    display: none;
+    text-align: center; 
+    width: 100%;
+    height: 100%;
+    line-height: 70vh; 
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 17px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.if-congratulations {
+    position: absolute;
+    top: 0;
+    display: none;
+    text-align: center; 
+    width: 100%;
+    height: 100%;
+    line-height: 70vh; 
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 17px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.if__didnt-guess {
+    position: absolute;
+    top: 0;
+    display: none;
+    text-align: center; 
+    width: 100%;
+    height: 100%;
+    line-height: 70vh; 
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 17px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 730px) {
+
+    .main-square {
+        width: 348px;
+        height: 587px;
+    }
+
+    .main__background-phone-img.active {
+        display: block;
+    }
+
+    .main__background-img.active {
+        display: none;
+    }
+
+    .word-info {
+        width: 300px;
+        position: absolute;
+        left: 19px;
+        text-shadow: 0 0 16px rgb(255 255 255);
+        font-size: 1rem;
+    }
+
+    #guess-button {
+        top: 462px;
+        right: 264px;
+        width: 70px;
+        height: 58px;
+        border-radius: 15px;
+        font-size: 0.9rem;
+    }
+
+    .button-reset {
+        top: 462px;
+        right: 11px;
+        width: 70px;
+        height: 58px;
+        border-radius: 15px;
+        font-size: 0.9rem;
+    }
+
+    .attemts-info {
+        top: 496px;
+        left: 180px;
+        width: 70px;
+        height: 58px;
+        border-radius: 15px;
+        font-size: 2.5rem;
+    }
+
+    .guessed-info {
+        top: 496px;
+        left: 93px;
+        width: 70px;
+        height: 58px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+    }
+
+    .guess-section input {
+        top: 271px;
+        right: 139px;
+        font-size: 2.3rem;
+    }
+
+    .if-invalid {
+        left: 0;
+        line-height: 60vh; 
+    }
+
+    .if-guessed {
+        left: 0;
+        line-height: 60vh; 
+    }
+
+    .if__not-in {
+        left: 0;
+        line-height: 60vh; 
+    }
+
+    .if-congratulations {
+        left: 0;
+        line-height: 60vh; 
+    }
+
+    .if__didnt-guess {
+        left: 0;
+        line-height: 60vh; 
+    }
+}

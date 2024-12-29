@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/game.css">
+    <script src="./js/game.js" defer></script>
+    <script src="./js/jQueryv3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <title>Game V2</title>
+</head>
+<body>
+    <main class="main">
+       
+        <div class="main-square">
+            <img class="main__background-img" src="./img/game.jpg" alt="">
+            <img class="main__background-phone-img" src="./img/game-phone.jpg" alt="">
+            <button class="button-info">Read the rules</button>
+            <div class="game__start-text">
+                <h1>Guessing Game</h1>
+                <h2>Try to guess the school subject that is hidden</h2>
+                <h2>You will only have 5 attempts to do this!</h2>
+                <h2>Good luck</h2>
+                <button class="button-back">Back</button>
+                <button class="button-start">Start the game</button>
+            </div>
+
+            <div class="main-game">
+                <div class="game-info">
+                    <h3 class="word-info"></h3>
+                    <h3 class="attemts-info"></h3>
+                    <h3 class="attemts-info-number"></h3>
+                    <h3 class="guessed-info"></h3>
+                </div>
+                <div class="guess-section">
+                    <input id="guess-input" maxlength="1" type="text" placeholder="-">
+                    <button type="submit" id="guess-button">GUESS</button>
+                </div>
+                <button class="button-reset">RESET</button>
+
+                <section class="game-if">
+                    <div class="if-invalid"></div>
+                    <div class="if-guessed"></div>
+                    <div class="if__not-in"></div>
+                    <div class="if-congratulations"></div>
+                    <div class="if__didnt-guess"></div>
+                </section>
+            </div>
+        </div>
+
+        <img class="background" src="./img/game.jpg" alt="backgroundImg">
+    </main>
+</body>
+</html>
