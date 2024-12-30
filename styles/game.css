@@ -389,7 +389,7 @@ body.active {
 
     #guess-button {
         top: 464px;
-        right: 266px;
+        left: 12px;
         width: 70px;
         height: 58px;
         border-radius: 15px;
