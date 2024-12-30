@@ -119,6 +119,7 @@ document.querySelector(".button-start").addEventListener("click", () => {
     gameInfoStart.classList.add("active");
     guessSection.classList.add("active");
     buttonReset.style.display = "block";
+    guessButton.style.display = "block"
     backgroundMainImg.classList.add("active");
     backgroundMainPhoneImg.classList.add("active");
 
