@@ -15,7 +15,7 @@ const buttonBack = document.querySelector(".button-back");
 const textReadMore = document.querySelector(".game__start-text");
 const buttonReset = document.querySelector(".button-reset");
 const guessInput = document.querySelector("#guess-input");
-const guessButton = document.querySelector("#guess-button");
+const guessButton = document.querySelector(".guess-button");
 
 const gameInfoStart = document.querySelector(".game-info");
 const wordInfo = document.querySelector(".word-info");

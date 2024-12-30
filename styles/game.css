@@ -77,7 +77,7 @@ body.active {
     display: block;
 }
 
-#guess-button {
+.guess-button {
     position: absolute;
     top: 567px;
     right: 217px;
@@ -382,7 +382,7 @@ body.active {
         font-size: 1rem;
     }
 
-    #guess-button {
+    .guess-button {
         top: 464px;
         right: 266px;
         width: 70px;
