@@ -91,7 +91,6 @@ body.active {
     font-size: 1.3rem;
     font-weight: 700;
     text-shadow: 0 0 19px #ffffffa3;
-    text-align: center;
 }
 
 .button-reset {
@@ -109,6 +108,7 @@ body.active {
     font-weight: 700;
     text-shadow: 0 0 19px #ffffffa3;
 }
+
 
 .game__start-text h1 {
     font-weight: 500;
@@ -259,6 +259,11 @@ body.active {
     text-align: center;
 }
 
+#guess-button {
+    display: none;
+    text-align: center;
+}
+
 .guessed-info {
     display: flex;
     justify-content: center;
@@ -389,7 +394,6 @@ body.active {
         height: 58px;
         border-radius: 15px;
         font-size: 0.9rem;
-        text-align: center;
     }
 
     .button-reset {

@@ -88,6 +88,7 @@ const resetGame = () => {
     gameInfoStart.classList.remove("active");
     guessSection.classList.remove("active");
     buttonReset.style.display = "none";
+    guessButton.style.display = "none"
     buttonReadMore.style.display = "block";
     backgroundMainImg.classList.remove("active");
     backgroundMainPhoneImg.classList.remove("active");
