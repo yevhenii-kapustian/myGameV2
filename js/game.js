@@ -7,7 +7,7 @@ let guessedLetters = [];
 let displayWord = Array(chosenWord.length).fill("_");
 let historyBack = [];
 
-const backgrounImg = document.querySelector(".background");
+// const backgrounImg = document.querySelector(".background");
 const backgroundMainImg = document.querySelector(".main__background-img");
 const backgroundMainPhoneImg = document.querySelector(".main__background-phone-img");
 const buttonReadMore = document.querySelector(".button-info");
@@ -91,7 +91,7 @@ const resetGame = () => {
     buttonReadMore.style.display = "block";
     backgroundMainImg.classList.remove("active");
     backgroundMainPhoneImg.classList.remove("active");
-    backgrounImg.style.display = "none";
+    // backgrounImg.style.display = "none";
     updateGameInfo();
 };
 
@@ -120,7 +120,7 @@ document.querySelector(".button-start").addEventListener("click", () => {
     buttonReset.style.display = "block";
     backgroundMainImg.classList.add("active");
     backgroundMainPhoneImg.classList.add("active");
-    backgrounImg.style.display = "block";
+    // backgrounImg.style.display = "block";
 
     updateGameInfo();
 });

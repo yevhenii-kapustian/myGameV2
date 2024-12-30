@@ -19,9 +19,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-image: url('../img/game.jpg');
+    background-size: cover; /* Масштабирует изображение на весь экран */
+    background-repeat: no-repeat; /* Отключает повторение */
+    background-position: center; /* Центрирует изображение */
+    background-attachment: fixed;
 }
 
-.background  {
+/* .background  {
     display: none;
     position: absolute;
     top: 0;
@@ -35,7 +41,7 @@ body {
     background-size: cover;
     background-position: center;
     z-index: -10;
-}
+} */
 
 .main-square {
     position: relative;
@@ -48,6 +54,7 @@ body {
     height: 700px;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
+    z-index: 10;
 }
 
 .main__background-img {
