@@ -223,11 +223,11 @@ body {
     font-weight: 700;
     text-shadow: 0 0 16px #ff0000;
     border: 0;
-    width: 5rem;
+    width: 100%;
     height: 5rem;
     position: absolute;
     top: 330px;
-    right: 305px;
+    right: 0;
 }
 
 .guess-section input::placeholder {
